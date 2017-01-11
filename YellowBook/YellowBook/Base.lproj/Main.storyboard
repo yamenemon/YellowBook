@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Hs-r3-Jaj" userLabel="BaseView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4d-nL-JbA" userLabel="ButtonView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPX-aF-a0w">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="66"/>
+                                                <color key="backgroundColor" red="0.4392156862745098" green="0.74117647058823533" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="45" maxY="-43"/>
+                                                <inset key="imageEdgeInsets" minX="70" minY="0.0" maxX="-10" maxY="15"/>
+                                                <state key="normal" title="Capital City" image="capital.png"/>
+                                                <connections>
+                                                    <action selector="CapitalCityBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnj-nl-EhZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYc-EB-aXj">
+                                                <rect key="frame" x="189" y="0.0" width="187" height="66"/>
+                                                <color key="backgroundColor" red="0.43903571367263794" green="0.7392842173576355" blue="0.29836833477020264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="45" maxY="-43"/>
+                                                <inset key="imageEdgeInsets" minX="70" minY="0.0" maxX="10" maxY="15"/>
+                                                <state key="normal" title="Calling Code" image="calling.png"/>
+                                                <connections>
+                                                    <action selector="CallingCodeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="veo-Cj-dN6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="GYc-EB-aXj" secondAttribute="bottom" constant="1" id="3Zh-3j-1VS"/>
+                                            <constraint firstItem="GYc-EB-aXj" firstAttribute="top" secondItem="W4d-nL-JbA" secondAttribute="top" id="Gra-aN-lii"/>
+                                            <constraint firstItem="bPX-aF-a0w" firstAttribute="top" secondItem="W4d-nL-JbA" secondAttribute="top" id="QXe-sS-Wih"/>
+                                            <constraint firstItem="GYc-EB-aXj" firstAttribute="leading" secondItem="bPX-aF-a0w" secondAttribute="trailing" constant="2" id="WiO-5X-Ch5"/>
+                                            <constraint firstItem="bPX-aF-a0w" firstAttribute="leading" secondItem="W4d-nL-JbA" secondAttribute="leading" id="Xm1-lM-ZAE"/>
+                                            <constraint firstAttribute="bottom" secondItem="bPX-aF-a0w" secondAttribute="bottom" constant="1" id="kIa-rg-S1i"/>
+                                            <constraint firstItem="bPX-aF-a0w" firstAttribute="height" secondItem="GYc-EB-aXj" secondAttribute="height" id="m6W-69-Y2F"/>
+                                            <constraint firstItem="bPX-aF-a0w" firstAttribute="width" secondItem="GYc-EB-aXj" secondAttribute="width" id="vHO-hY-UEx"/>
+                                            <constraint firstAttribute="trailing" secondItem="GYc-EB-aXj" secondAttribute="trailing" constant="-1" id="yxW-GQ-RDc"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-SK-OBC">
+                                        <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="lbw-hx-iJS"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="lrI-4O-x0h"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gxc-SK-OBC" firstAttribute="top" secondItem="W4d-nL-JbA" secondAttribute="bottom" constant="1" id="8dl-i2-zgJ"/>
+                                    <constraint firstItem="gxc-SK-OBC" firstAttribute="top" secondItem="5Hs-r3-Jaj" secondAttribute="top" constant="68" id="Ij3-HR-dZO"/>
+                                    <constraint firstAttribute="trailing" secondItem="gxc-SK-OBC" secondAttribute="trailing" id="Ivv-hS-n9T"/>
+                                    <constraint firstItem="W4d-nL-JbA" firstAttribute="leading" secondItem="5Hs-r3-Jaj" secondAttribute="leading" id="jMk-Dx-pOA"/>
+                                    <constraint firstAttribute="trailing" secondItem="W4d-nL-JbA" secondAttribute="trailing" id="jlz-bp-dWp"/>
+                                    <constraint firstItem="W4d-nL-JbA" firstAttribute="top" secondItem="5Hs-r3-Jaj" secondAttribute="top" id="n9f-5C-mJY"/>
+                                    <constraint firstItem="gxc-SK-OBC" firstAttribute="leading" secondItem="5Hs-r3-Jaj" secondAttribute="leading" id="qwp-vL-sKP"/>
+                                    <constraint firstAttribute="bottom" secondItem="gxc-SK-OBC" secondAttribute="bottom" id="w8D-ux-DFf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Hs-r3-Jaj" secondAttribute="bottom" id="3Xo-ww-z6a"/>
+                            <constraint firstAttribute="trailing" secondItem="5Hs-r3-Jaj" secondAttribute="trailing" id="8iG-R3-DBX"/>
+                            <constraint firstItem="5Hs-r3-Jaj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hhF-nF-lQi"/>
+                            <constraint firstItem="5Hs-r3-Jaj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xaB-Bp-jS2"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="InfoTableView" destination="gxc-SK-OBC" id="2wC-dl-vLO"/>
+                        <outlet property="callingCodeBtn" destination="GYc-EB-aXj" id="e9S-AH-uhD"/>
+                        <outlet property="capitalCityBtn" destination="bPX-aF-a0w" id="LXL-ax-DiC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calling.png" width="50" height="40"/>
+        <image name="capital.png" width="50" height="40"/>
+    </resources>
+</document>
