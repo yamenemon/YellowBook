@@ -36,29 +36,19 @@
                                                                message: nil
                                                         preferredStyle: UIAlertControllerStyleAlert];
 
-
 //    [self.alertController addAction:[UIAlertAction actionWithTitle: @"Cancel" style: UIAlertActionStyleCancel handler:nil]];
 
 
     UIViewController *customVC     = [[UIViewController alloc] init];
-
-
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
     [customVC.view addSubview:spinner];
-
-
-    [customVC.view addConstraint:[NSLayoutConstraint
-                                  constraintWithItem: spinner
-                                  attribute:NSLayoutAttributeCenterX
+    [customVC.view addConstraint:[NSLayoutConstraint  constraintWithItem: spinner attribute:NSLayoutAttributeCenterX
                                   relatedBy:NSLayoutRelationEqual
                                   toItem:customVC.view
                                   attribute:NSLayoutAttributeCenterX
                                   multiplier:1.0f
                                   constant:0.0f]];
-
-
-
     [customVC.view addConstraint:[NSLayoutConstraint
                                   constraintWithItem: spinner
                                   attribute:NSLayoutAttributeCenterY
@@ -67,11 +57,7 @@
                                   attribute:NSLayoutAttributeCenterY
                                   multiplier:1.0f
                                   constant:0.0f]];
-
-
     [self.alertController setValue:customVC forKey:@"contentViewController"];
-    
-    
     [self presentViewController: self.alertController
                        animated: true
                      completion: nil];
